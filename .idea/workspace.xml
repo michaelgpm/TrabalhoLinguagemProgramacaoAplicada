@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="83364d63-ffca-4a3f-8c32-33cb61fd5fc5" name="Changes" comment="Initial commit">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+    <list default="true" id="83364d63-ffca-4a3f-8c32-33cb61fd5fc5" name="Changes" comment="Adding classes generated from StarUML">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/game.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/game.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/menu.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/menu.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +60,7 @@
       <recent name="D:\Faculdade\Linguagem de programação aplicada\Trabalho\venv" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Faculdade\Linguagem de programação aplicada\Trabalho\code" />
       <recent name="D:\Faculdade\Linguagem de programação aplicada\Trabalho\venv\Scripts" />
       <recent name="D:\Faculdade\Linguagem de programação aplicada\Trabalho" />
     </key>
@@ -88,11 +89,29 @@
       <option name="project" value="LOCAL" />
       <updated>1774273782787</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="requirements and corrected gitignore&#10;code init">
+      <option name="closed" value="true" />
+      <created>1774274867007</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1774274867007</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Adding classes generated from StarUML">
+      <option name="closed" value="true" />
+      <created>1774275070633</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1774275070633</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
+    <MESSAGE value="requirements and corrected gitignore&#10;code init" />
+    <MESSAGE value="Adding classes generated from StarUML" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding classes generated from StarUML" />
   </component>
 </project>
