@@ -7,11 +7,8 @@ COLOR_YELLOW = (241,255,0)
 #M
 MENU_OPTION = ('NEW GAME SINGLE PLAYER',
                'SCORE',
-               'EXIT',
-               'CONTROLS:',
-               'SPACE = SHOOT',
-               'CURSORS(<,>,^,v) = MOVEMENTS')
+               'EXIT')
 
 #w
-WIN_WIDTH = 1285
-WIN_HEIGHT = 714
+WIN_WIDTH = 576
+WIN_HEIGHT = 320

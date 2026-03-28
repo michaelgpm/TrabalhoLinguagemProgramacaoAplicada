@@ -1,12 +1,19 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-from Entity import Entity
-
+from code.entity import Entity
 
 class Background(Entity):
-    def __init__(self):
+    def __init__(self,name:str, position: tuple):
+        super().__init__(name,position)
         pass
 
     def move(self, ):
-        pass
+       self.y += self.speed
+       self.rect.y = int(self.y)
+
+       height = -self.surf.get_height()
+
+       if self.rect.top >=320:
+           assert isinstance(height, object)
+           self.y=height

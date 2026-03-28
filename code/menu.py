@@ -1,41 +1,60 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 import pygame.image
-from pygame import Surface, Rect
+from pygame import Surface, Rect, event
 from pygame.font import Font
-from code.Const import WIN_WIDTH, WIN_HEIGHT, COLOR_BLACK, MENU_OPTION, COLOR_WHITE, COLOR_PURPLE,COLOR_DPURPLE,COLOR_YELLOW
+from code.Const import WIN_WIDTH, WIN_HEIGHT, COLOR_BLACK, MENU_OPTION, COLOR_WHITE, COLOR_PURPLE, COLOR_DPURPLE, \
+    COLOR_YELLOW
 
 
 class Menu:
     def __init__(self, window):
         self.window = window
-        self.surf = pygame.image.load('./asset/Menubg.jpg')
+        self.surf = pygame.image.load('./asset/Menubg.jpg').convert_alpha()
         self.rect = self.surf.get_rect(left=0, top=0)
 
-    def run(self, ):
+    def run(self):
+        menu_option = 0
         pygame.mixer_music.load('./asset/Menugame.mp3')
         pygame.mixer_music.play(-1)
         while True:
             self.window.blit(source=self.surf, dest=self.rect)
-            self.menu_text(text_size=50,text="Nave", text_color=(COLOR_BLACK),text_center_pos=((WIN_WIDTH/2),220))
-            self.menu_text(text_size=50, text="Shooter", text_color=(COLOR_BLACK), text_center_pos=((WIN_WIDTH / 2), 300))
-
+            self.menu_text(text_size=30, text="Nave", text_color=COLOR_BLACK, text_center_pos=((WIN_WIDTH / 2), 70))
+            self.menu_text(text_size=30, text="Shooter", text_color=COLOR_BLACK, text_center_pos=((WIN_WIDTH / 2), 120))
+            self.menu_text(text_size=15, text="CONTROLS:", text_color=COLOR_BLACK,
+                           text_center_pos=((WIN_WIDTH / 2), 220))
+            self.menu_text(text_size=15, text="SPACE = SHOOT", text_color=COLOR_BLACK,
+                           text_center_pos=((WIN_WIDTH / 2), 240))
+            self.menu_text(text_size=15, text="CURSORS(<,>,^,v) = MOVEMENTS", text_color=COLOR_BLACK,
+                           text_center_pos=((WIN_WIDTH / 2), 260))
             for i in range(len(MENU_OPTION)):
-                self.menu_text(text_size=20, text=MENU_OPTION[i], text_color=(COLOR_BLACK),
-                               text_center_pos=((WIN_WIDTH / 2), 400 + 30 * i))
-
+                if i == menu_option:
+                    self.menu_text(15, MENU_OPTION[i], COLOR_YELLOW, ((WIN_WIDTH / 2), 160 + 20 * i))
+                else:
+                    self.menu_text(15, MENU_OPTION[i], COLOR_PURPLE, ((WIN_WIDTH / 2), 160 + 20 * i))
 
             pygame.display.flip()
             # Check for all events
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
-                    print('Quitting...')
-                    pygame.quit()
-                    quit()
-        pass
+                    pygame.quit()  # Close Window
+                    quit()  # end pygame
+                if event.type == pygame.KEYDOWN:
+                    if event.key == pygame.K_DOWN:  # DOWN KEY
+                        if menu_option < len(MENU_OPTION) - 1:
+                            menu_option += 1
+                        else:
+                            menu_option = 0
+                    if event.key == pygame.K_UP:  # UP KEY
+                        if menu_option > 0:
+                            menu_option -= 1
+                        else:
+                            menu_option = len(MENU_OPTION) - 1
+                    if event.key == pygame.K_RETURN:  # ENTER
+                        return MENU_OPTION[menu_option]
 
-    def menu_text(self, text_size: int, text: str, text_color: tuple, text_center_pos:tuple):
+    def menu_text(self, text_size: int, text: str, text_color: tuple, text_center_pos: tuple):
         text_font: Font = pygame.font.SysFont(name="Lucida Sans Typewriter", size=text_size)
-        text_surf: Surface = text_font.render(text,True,text_color).convert_alpha()
+        text_surf: Surface = text_font.render(text, True, text_color).convert_alpha()
         text_rect: Rect = text_surf.get_rect(center=text_center_pos)
         self.window.blit(source=text_surf, dest=text_rect)
