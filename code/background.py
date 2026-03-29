@@ -14,6 +14,6 @@ class Background(Entity):
 
        height = -self.surf.get_height()
 
-       if self.rect.top >=320:
+       if self.rect.top >=339:
            assert isinstance(height, object)
            self.y=height

@@ -1,14 +1,21 @@
 #C
+import pygame.constants
+
 COLOR_BLACK = (0,0,0)
 COLOR_WHITE = (255,255,255)
 COLOR_PURPLE = (163,73,164)
 COLOR_DPURPLE = (86,39,87)
 COLOR_YELLOW = (241,255,0)
+#E
+EVENT_ENEMY = pygame.constants.USEREVENT +1
+
 #M
 MENU_OPTION = ('NEW GAME SINGLE PLAYER',
                'SCORE',
                'EXIT')
-
+MAX_ENEMIES = 4
+#S
+SPAWN_TIME = 2000
 #w
 WIN_WIDTH = 576
 WIN_HEIGHT = 320
