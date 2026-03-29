@@ -11,6 +11,7 @@ from code.Const import EVENT_ENEMY, SPAWN_TIME, MAX_ENEMIES
 from code.enemy import Enemy
 from code.entity import Entity
 from code.entityFactory import EntityFactory
+from code.entityMediator import EntityMediator
 
 
 class Level:
@@ -44,3 +45,7 @@ class Level:
                         self.entity_list.append(EntityFactory.get_entity(enemy_type))
 
             pygame.display.flip()
+            #Collisions
+            EntityMediator.verify_collision(entity_list=self.entity_list)
+            EntityMediator.verify_health(entity_list=self.entity_list)
+        pass
