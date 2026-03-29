@@ -12,6 +12,8 @@ from code.enemy import Enemy
 from code.entity import Entity
 from code.entityFactory import EntityFactory
 from code.entityMediator import EntityMediator
+from code.player import Player
+from code.playerShot import PlayerShot
 
 
 class Level:
@@ -34,6 +36,18 @@ class Level:
             for ent in self.entity_list:
                 self.window.blit(source=ent.surf, dest=ent.rect)
                 ent.move()
+                if isinstance(ent, Player):
+                    shoot = ent.shoot()
+                    if shoot is not None:
+                        self.entity_list.append(shoot)
+                if isinstance(ent, PlayerShot):
+                    for target in self.entity_list[:]:
+                        if isinstance(target, Enemy):
+                            if ent.rect.colliderect(target.rect):
+                                # collision happened
+                                self.entity_list.remove(ent)
+                                self.entity_list.remove(target)
+                                break
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     pygame.quit()
@@ -45,7 +59,7 @@ class Level:
                         self.entity_list.append(EntityFactory.get_entity(enemy_type))
 
             pygame.display.flip()
-            #Collisions
+            # Collisions
             EntityMediator.verify_collision(entity_list=self.entity_list)
             EntityMediator.verify_health(entity_list=self.entity_list)
         pass

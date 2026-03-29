@@ -22,20 +22,26 @@ ENTITY_HEALTH = {
     'Level2Bg3': 999,
     'Level2Bg4': 999,
     'Player': 300,
-    'Player1Shot': 1,
-    'Player2Shot': 1,
+    'PlayerShot': 1,
     'Enemy1': 50,
-    'Enemy1Shot': 1,
     'Enemy2': 60,
-    'Enemy2Shot': 1,
+}
+ENTITY_SPEED = {
+'PlayerShot': 1
 }
 
+ENTITY_SHOT_DELAY = {
+    'Player':50
+}
 
 #M
 MENU_OPTION = ('NEW GAME SINGLE PLAYER',
                'SCORE',
                'EXIT')
 MAX_ENEMIES = 4
+
+#P
+PLAYER_KEY_SHOOT = {'Player': pygame.K_SPACE}
 #S
 SPAWN_TIME = 2000
 #w
