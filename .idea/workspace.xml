@@ -7,15 +7,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="83364d63-ffca-4a3f-8c32-33cb61fd5fc5" name="Changes" comment="Creating Mediator Pattern.&#10;Enemies Destruction">
-      <change afterPath="$PROJECT_DIR$/code/Explosion.py" afterDir="false" />
+    <list default="true" id="83364d63-ffca-4a3f-8c32-33cb61fd5fc5" name="Changes" comment="Creating Player Shoot&#10;Creating Enemy Shoot">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/asset/Player1Shot.png" beforeDir="false" afterPath="$PROJECT_DIR$/asset/PlayerShot.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/code/Const.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/Const.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/Explosion.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/Explosion.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/entity.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/entity.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/code/entityMediator.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/entityMediator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/level.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/level.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/player.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/player.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/playerShot.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/playerShot.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,7 +151,15 @@
       <option name="project" value="LOCAL" />
       <updated>1774750070925</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Creating Player Shoot&#10;Creating Enemy Shoot">
+      <option name="closed" value="true" />
+      <created>1774810810956</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1774810810956</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -164,6 +169,7 @@
     <MESSAGE value="creating main loop&#10;connecting Menu and Game classes" />
     <MESSAGE value="Creating player and Enemies&#10;Moving playes and Enemies" />
     <MESSAGE value="Creating Mediator Pattern.&#10;Enemies Destruction" />
-    <option name="LAST_COMMIT_MESSAGE" value="Creating Mediator Pattern.&#10;Enemies Destruction" />
+    <MESSAGE value="Creating Player Shoot&#10;Creating Enemy Shoot" />
+    <option name="LAST_COMMIT_MESSAGE" value="Creating Player Shoot&#10;Creating Enemy Shoot" />
   </component>
 </project>

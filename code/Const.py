@@ -8,6 +8,28 @@ COLOR_DPURPLE = (86,39,87)
 COLOR_YELLOW = (241,255,0)
 #E
 EVENT_ENEMY = pygame.constants.USEREVENT +1
+
+ENTITY_DAMAGE = {
+    'Level1Bg0': 0,
+    'Level1Bg1': 0,
+    'Level1Bg2': 0,
+    'Level1Bg3': 0,
+    'Level1Bg4': 0,
+    'Level1Bg5': 0,
+    'Level1Bg6': 0,
+    'Level2Bg0': 0,
+    'Level2Bg1': 0,
+    'Level2Bg2': 0,
+    'Level2Bg3': 0,
+    'Level2Bg4': 0,
+    'Player': 0,
+    'PlayerShot': 25,
+    'Enemy1': 100,
+    'Enemy1Shot': 20,
+    'Enemy2': 100,
+    'Enemy2Shot': 15,
+}
+
 ENTITY_HEALTH = {
     'Level1Bg0': 999,
     'Level1Bg1': 999,
@@ -21,10 +43,10 @@ ENTITY_HEALTH = {
     'Level2Bg2': 999,
     'Level2Bg3': 999,
     'Level2Bg4': 999,
-    'Player': 300,
-    'PlayerShot': 1,
-    'Enemy1': 50,
-    'Enemy2': 60,
+    'Player': 1,
+    'PlayerShot': 10,
+    'Enemy1': 1,
+    'Enemy2': 1,
 }
 ENTITY_SPEED = {
 'PlayerShot': 1
@@ -36,7 +58,7 @@ ENTITY_SHOT_DELAY = {
 
 #M
 MENU_OPTION = ('NEW GAME SINGLE PLAYER',
-               'SCORE',
+               '',
                'EXIT')
 MAX_ENEMIES = 4
 
